@@ -43,7 +43,7 @@ button {
   box-shadow: 2px 2px 2px var(--secondary-medium-color);
 }
 
-button:hover {
+button.show-answer:hover {
   background-color: #f194b4;
   font-size: 0.8rem;
   transition: 0.2s linear;
@@ -61,6 +61,7 @@ button:hover {
   color: var(--primary-medium-color);
   padding-block: 10px;
   text-align: center;
+  z-index: 2;
 }
 
 .homepage-main {
@@ -86,6 +87,23 @@ button:hover {
   padding: 1.5rem 1rem;
   color: var(--secondary-medium-color);
   box-shadow: 5px 5px 5px var(--primary-dark-color);
+}
+
+.tags {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+.btn-tags {
+  opacity: 70%;
+  box-shadow: none;
+  background-color: var(--primary-dark-color);
+  color: var(--primary-light-color);
+  font-size: 0.4rem;
 }
 
 .footer {
