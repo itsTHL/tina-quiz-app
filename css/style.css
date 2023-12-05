@@ -17,10 +17,13 @@
 body {
   background-color: var(--primary-light-color);
   margin: 0 auto;
+  position: relative;
 }
 
 h1 {
-  padding: 1rem;
+  align-self: center;
+  position: sticky;
+  top: 0px;
 }
 
 h2 {
@@ -36,6 +39,8 @@ button {
   color: var(--primary-dark-color);
   padding: 0.5rem;
   font-size: 0.75rem;
+  font-weight: bolder;
+  margin-block: 1rem;
 }
 
 button:hover {
@@ -45,11 +50,15 @@ button:hover {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
   background-color: var(--primary-dark-color);
   border-radius: var(--border-radius-small);
   color: var(--primary-medium-color);
-  height: 10vh;
+  padding-block: 10px;
+  /* height: 10vh; */
   text-align: center;
+  margin-bottom: 2vh;
 }
 
 .homepage-main {
