@@ -4,6 +4,8 @@
   --primary-medium-color: #f194b4;
   --secondary-medium-color: #ffb100;
   --primary-light-color: #ffebc6;
+
+  --border-radius-small: 4px;
 }
 
 * {
@@ -17,9 +19,15 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  padding: 1rem;
+}
+
 .header {
   background-color: var(--primary-dark-color);
-  color: var(--primary-light-color);
+  border-radius: var(--border-radius-small);
+  color: var(--primary-medium-color);
+  height: 10vh;
   text-align: center;
 }
 
