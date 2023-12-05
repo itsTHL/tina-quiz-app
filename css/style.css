@@ -6,6 +6,7 @@
   --primary-light-color: #ffebc6;
 
   --border-radius-small: 5px;
+  --border-radius-big: 20px;
 }
 
 * {
@@ -16,28 +17,105 @@
 body {
   background-color: var(--primary-light-color);
   margin: 0 auto;
+  position: relative;
 }
 
 h1 {
-  padding: 1rem;
+  align-self: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding-block: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bolder;
+  margin-block: 1rem;
+  width: 50%;
+  box-shadow: 2px 2px 2px var(--secondary-medium-color);
+}
+
+button.show-answer:hover {
+  background-color: #f194b4;
+  font-size: 0.8rem;
+  transition: 0.2s linear;
+  box-shadow: none;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: var(--primary-dark-color);
   border-radius: var(--border-radius-small);
   color: var(--primary-medium-color);
-  height: 10vh;
+  padding-block: 10px;
   text-align: center;
+  z-index: 2;
 }
 
 .homepage-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 12vh;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
 }
 
 .question-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--secondary-dark-color);
+  width: 75%;
+  max-width: 700px;
+  min-height: 220px;
+  border-radius: var(--border-radius-big);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--secondary-medium-color);
+  box-shadow: 5px 5px 5px var(--primary-dark-color);
+  position: relative;
+}
+
+.bookmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -25%);
+}
+
+.tags {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+.btn-tags {
+  opacity: 70%;
+  box-shadow: none;
+  background-color: var(--primary-dark-color);
+  color: var(--primary-light-color);
+  font-size: 0.4rem;
 }
 
 .footer {
@@ -45,7 +123,6 @@ h1 {
   border-radius: var(--border-radius-small);
   position: fixed;
   bottom: 0;
-  height: 10vh;
   width: 100%;
 }
 
@@ -54,6 +131,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  margin-block: 1.5vh;
 }
 
 .nav-bar-items {
@@ -64,7 +142,7 @@ h1 {
 
 .nav-bar-items:hover {
   background-color: var(--secondary-medium-color);
-  transition: 0.25s linear;
+  transition: 0.3s linear;
 }
 
 .nav-bar-items:current {
