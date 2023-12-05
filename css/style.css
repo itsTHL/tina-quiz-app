@@ -145,10 +145,6 @@ button.show-answer:hover {
   transition: 0.3s linear;
 }
 
-.nav-bar-items:current {
-  background-color: var(--secondary-dark-color);
-}
-
 .nav-bar--btn {
   width: 30px;
 }
