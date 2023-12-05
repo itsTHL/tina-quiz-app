@@ -6,7 +6,7 @@
   --primary-light-color: #ffebc6;
 
   --border-radius-small: 5px;
-  --border-radius-small: 20px;
+  --border-radius-big: 20px;
 }
 
 * {
@@ -21,6 +21,12 @@ body {
 
 h1 {
   padding: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding-block: 1rem;
 }
 
 .header {
@@ -43,8 +49,13 @@ h1 {
 .question-card {
   background-color: var(--secondary-dark-color);
   width: 75%;
+  max-width: 700px;
+  min-height: 200px;
   height: 20%;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-big);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--secondary-medium-color);
 }
 
 .footer {
