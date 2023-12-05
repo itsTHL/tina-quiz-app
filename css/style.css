@@ -12,6 +12,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,6 +28,11 @@ h1 {
 h2 {
   font-size: 1.2rem;
   font-weight: bolder;
+  padding-block: 1rem;
+}
+
+h3 {
+  color: var(--secondary-dark-color);
   padding-block: 1rem;
 }
 
@@ -73,7 +79,7 @@ button.show-answer:hover {
   width: 100vw;
   padding-top: 12vh;
   overflow-y: auto;
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 70px);
 }
 
 .question-card {
@@ -83,7 +89,7 @@ button.show-answer:hover {
   background-color: var(--secondary-dark-color);
   width: 75%;
   max-width: 700px;
-  min-height: 220px;
+  /* min-height: 300px; */
   border-radius: var(--border-radius-big);
   text-align: center;
   padding: 1.5rem 1rem;
