@@ -29,6 +29,21 @@ h2 {
   padding-block: 1rem;
 }
 
+button {
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+button:hover {
+  background-color: #f194b4;
+  font-size: 0.8rem;
+  transition: 0.3s linear;
+}
+
 .header {
   background-color: var(--primary-dark-color);
   border-radius: var(--border-radius-small);
@@ -82,7 +97,7 @@ h2 {
 
 .nav-bar-items:hover {
   background-color: var(--secondary-medium-color);
-  transition: 0.25s linear;
+  transition: 0.3s linear;
 }
 
 .nav-bar-items:current {
