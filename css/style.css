@@ -68,10 +68,12 @@ button.show-answer:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   height: 100vh;
   width: 100vw;
   padding-top: 12vh;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
 }
 
 .question-card {
@@ -87,6 +89,16 @@ button.show-answer:hover {
   padding: 1.5rem 1rem;
   color: var(--secondary-medium-color);
   box-shadow: 5px 5px 5px var(--primary-dark-color);
+  position: relative;
+}
+
+.bookmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -25%);
 }
 
 .tags {
