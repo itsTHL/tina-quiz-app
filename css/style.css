@@ -134,6 +134,10 @@ button.show-answer:hover {
   color: var(--secondary-medium-color);
 }
 
+.counter-section {
+  display: flex;
+}
+
 .question-card {
   display: flex;
   flex-direction: column;
