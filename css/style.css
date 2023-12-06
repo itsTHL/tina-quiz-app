@@ -79,18 +79,26 @@ button.show-answer:hover {
   height: 100vh;
   width: 100vw;
   padding-top: 12vh;
+  padding-bottom: 50px;
+  /* The following is a code snippet provided by Javier
+  --> need to understand fully later! */
   overflow-y: auto;
   max-height: calc(100vh - 70px);
 }
 
 .profile-main {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   padding-top: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  padding-bottom: 50px;
+  /* The following is a code snippet provided by Javier
+  --> need to understand fully later! */
+  overflow-y: auto;
+  max-height: calc(100vh - 70px);
 }
 
 .profile-main > * {
@@ -136,6 +144,85 @@ button.show-answer:hover {
 
 .counter-section {
   display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.counter-section-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 50%;
+}
+
+.counter-created-questions-icon,
+.counter-bookmarks-icon {
+  height: 50%;
+}
+
+.counter-number {
+  color: var(--primary-medium-color);
+}
+
+.settings--dark-mode-heading {
+  font-size: 0.9rem;
+  color: var(--secondary-medium-color);
+}
+
+.settings--dark-mode {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* following code courtesy of Google
+--> need to fully understand later! */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-medium-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+.slider:before {
+  position: absolute;
+  content: “”;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary-medium-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+input:checked + .slider {
+  background-color: var(--primary-dark-color);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-medium-color);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .question-card {
