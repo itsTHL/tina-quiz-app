@@ -47,11 +47,9 @@ button {
   margin-block: 1rem;
   width: 50%;
   box-shadow: 2px 2px 2px var(--secondary-medium-color);
-}
-
-button.show-answer {
   transition: 0.2s linear;
 }
+
 button.show-answer:hover {
   background-color: #f194b4;
   font-size: 0.8rem;
