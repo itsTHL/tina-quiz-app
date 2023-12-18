@@ -71,8 +71,6 @@ form.addEventListener("submit", (event) => {
         <h3 data-js="answer">${newAnswer}</h3>
         <div class="tags">
           <button class="btn-tags">${newTag}</button>
-          <button class="btn-tags">#tagtwo</button>
-          <button class="btn-tags">#tagthree</button>
         </div>
 `;
 
