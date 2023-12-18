@@ -88,6 +88,7 @@ button.submit-form:hover {
   padding-block: 10px;
   text-align: center;
   z-index: 2;
+  box-shadow: 2px 2px 4px #26281f;
 }
 
 .homepage-main,
@@ -217,57 +218,9 @@ button.submit-form:hover {
 
 .settings--dark-mode {
   display: flex;
-  justify-content: space-between;
-}
-
-/* following code courtesy of Google
---> need to fully understand later! */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--primary-medium-color);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 30px;
-}
-.slider:before {
-  position: absolute;
-  content: “”;
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--primary-medium-color);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 30px;
-}
-input:checked + .slider {
-  background-color: var(--primary-dark-color);
-}
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--primary-medium-color);
-}
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
 }
 
 .question-card {
@@ -346,18 +299,33 @@ input:checked + .slider:before {
 
 .dm-btn-container {
   width: 30%;
-  border: 1px solid red;
+  height: 25px;
+  /* border: 1px solid red; */
+  border-radius: var(--border-radius-big);
 }
 
 .dm-btn {
-  width: 25px;
+  width: 50px;
   height: 25px;
   border-radius: 100px;
+  margin: auto 0;
 }
 
-/* body.dark {
-  background-color: var(--primary-dark-color);
-} */
+.btn-position {
+  position: relative;
+  align-self: start;
+  transition: all 0.5s linear;
+}
+
+.position--0 {
+  top: 0;
+  left: 0;
+}
+
+.position--1 {
+  left: 60%;
+  transition: all 0.5s linear;
+}
 
 .darkmode {
   /* --primary-dark-color: #003844;
