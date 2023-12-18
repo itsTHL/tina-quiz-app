@@ -19,6 +19,7 @@ body {
   background-color: var(--primary-light-color);
   margin: 0 auto;
   position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 h1 {
@@ -103,6 +104,23 @@ button.show-answer:hover {
   --> need to understand fully later! */
   overflow-y: auto;
   max-height: calc(100vh - 70px);
+}
+
+.form {
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--border-radius-big);
+  padding: 1.5rem 1rem;
+  color: var(--secondary-medium-color);
+  font-weight: bolder;
+}
+
+.form > * {
+  display: block;
+  margin: 1rem auto;
+}
+
+.form > input {
+  width: 100%;
 }
 
 .profile-main > * {
