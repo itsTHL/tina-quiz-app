@@ -125,6 +125,12 @@ button.submit-form:hover {
   width: 100%;
 }
 
+.remaining-characters {
+  color: var(--primary-medium-color);
+  font-size: 0.6rem;
+  text-align: right;
+}
+
 .profile-main > * {
   width: 75%;
   padding: 20px;
