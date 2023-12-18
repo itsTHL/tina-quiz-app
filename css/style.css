@@ -344,12 +344,8 @@ input:checked + .slider:before {
   width: 30px;
 }
 
-body.dark {
-  background-color: var(--primary-dark-color);
-}
-
 .dm-btn-container {
-  width: 40%;
+  width: 30%;
   border: 1px solid red;
 }
 
@@ -357,4 +353,22 @@ body.dark {
   width: 25px;
   height: 25px;
   border-radius: 100px;
+}
+
+/* body.dark {
+  background-color: var(--primary-dark-color);
+} */
+
+.darkmode {
+  /* --primary-dark-color: #003844;
+  --secondary-dark-color: #006c67;
+  --primary-medium-color: #f194b4;
+  --secondary-medium-color: #ffb100;
+  --primary-light-color: #ffebc6; */
+
+  --primary-dark-color: #003844;
+  --secondary-dark-color: #003844;
+  --primary-medium-color: #ffebc6;
+  --secondary-medium-color: #f194b4;
+  --primary-light-color: #01262e;
 }
