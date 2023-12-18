@@ -32,7 +32,6 @@ h2 {
 }
 
 h3 {
-  color: var(--secondary-dark-color);
   padding-block: 1rem;
 }
 
@@ -54,6 +53,10 @@ button.show-answer:hover {
   background-color: #f194b4;
   font-size: 0.8rem;
   box-shadow: none;
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
