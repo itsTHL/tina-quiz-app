@@ -13,6 +13,14 @@ const showAnswerButton = document.querySelector(
 );
 const answer = document.querySelector('[data-js="answer"]');
 
+answer.classList.add("hidden");
+
 showAnswerButton.addEventListener("click", (event) => {
   answer.classList.toggle("hidden");
+
+  if (showAnswerButton.innerText === "Show Answer") {
+    showAnswerButton.innerText = "Hide Answer";
+  } else {
+    showAnswerButton.innerText = "Show Answer";
+  }
 });
