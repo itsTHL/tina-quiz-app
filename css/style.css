@@ -112,6 +112,7 @@ button.show-answer:hover {
   padding: 1.5rem 1rem;
   color: var(--secondary-medium-color);
   font-weight: bolder;
+  box-shadow: 5px 5px 5px var(--primary-dark-color);
 }
 
 .form > * {
