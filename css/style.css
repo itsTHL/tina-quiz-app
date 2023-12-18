@@ -47,14 +47,34 @@ button {
   margin-block: 1rem;
   width: 50%;
   box-shadow: 2px 2px 2px var(--secondary-medium-color);
-  transition: 0.2s linear;
+  transition: 0.3s ease-in-out;
 }
 
-button.show-answer:hover,
+/* button.show-answer:hover,
 button.submit-form:hover {
   background-color: #f194b4;
-  font-size: 0.8rem;
-  box-shadow: none;
+  box-shadow: -3px -3px 2px var(--primary-dark-color);
+} */
+
+* button.show-answer:hover {
+  animation: border 1.5s linear infinite;
+}
+@keyframes border {
+  0% {
+    box-shadow: 2px 2px 4px 2px var(--secondary-medium-color);
+  }
+
+  25% {
+    box-shadow: -2px 2px 4px 2px var(--secondary-medium-color);
+  }
+
+  75% {
+    box-shadow: -2px -2px 4px 2px var(--primary-medium-color);
+  }
+
+  100% {
+    box-shadow: 2px -2px 4px 2px var(--primary-medium-color);
+  }
 }
 
 .hidden {
