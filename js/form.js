@@ -1,6 +1,30 @@
 const formMain = document.querySelector('[data-js="form-main"]');
 const form = document.querySelector('[data-js="form"]');
 
+const textAreaInputQuestion = document.querySelector(
+  '[data-js="text-area-input-question"]'
+);
+const textAreaInputAnswer = document.querySelector(
+  '[data-js="text-area-input-answer"]'
+);
+const MAX_CHARACTERS = 150;
+const charactersLeftQuestion = document.querySelector(
+  '[data-js="remaining-characters-question"]'
+);
+const charactersLeftAnswer = document.querySelector(
+  '[data-js="remaining-characters-answer"]'
+);
+
+textAreaInputQuestion.addEventListener("input", (event) => {
+  charactersLeftQuestion.textContent =
+    MAX_CHARACTERS - parseInt(event.target.value.length);
+});
+
+textAreaInputAnswer.addEventListener("input", (event) => {
+  charactersLeftAnswer.textContent =
+    MAX_CHARACTERS - parseInt(event.target.value.length);
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
