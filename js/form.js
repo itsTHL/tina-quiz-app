@@ -102,6 +102,4 @@ form.addEventListener("submit", (event) => {
       showAnswerButton.innerText = "Show Answer";
     }
   });
-
-  event.target.reset();
 });

@@ -343,3 +343,18 @@ input:checked + .slider:before {
 .nav-bar--btn {
   width: 30px;
 }
+
+body.dark {
+  background-color: var(--primary-dark-color);
+}
+
+.dm-btn-container {
+  width: 40%;
+  border: 1px solid red;
+}
+
+.dm-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}

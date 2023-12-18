@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Profile | Vietname - Quiz</title>
+    <title>Profile | Vietnam - Quiz</title>
   </head>
-  <body>
+  <body data-js="body">
     <header class="header"><h1>Profile | Vietnam-Quiz</h1></header>
     <main class="profile-main">
       <section class="intro-section">
@@ -52,10 +52,13 @@
         <div class="settings--dark-mode">
           <h3 class="settings--dark-mode-heading">Dark Mode</h3>
 
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider" round”></span>
-          </label>
+          <!-- <label class="switch">
+            <input type="checkbox" data-js="toggle" />
+            <span class="slider"></span>
+          </label> -->
+          <div class="dm-btn-container">
+            <button type="button" class="dm-btn" data-js="dm-btn"></button>
+          </div>
         </div>
       </section>
     </main>
@@ -95,5 +98,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/darkmode.js"></script>
   </body>
 </html>
