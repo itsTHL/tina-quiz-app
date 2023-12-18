@@ -89,7 +89,8 @@ button.show-answer:hover {
   max-height: calc(100vh - 70px);
 }
 
-.profile-main {
+.profile-main,
+.form-main {
   width: 100vw;
   height: 100vh;
   padding-top: 12vh;
