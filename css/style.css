@@ -19,6 +19,7 @@ body {
   background-color: var(--primary-light-color);
   margin: 0 auto;
   position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 h1 {
@@ -32,7 +33,6 @@ h2 {
 }
 
 h3 {
-  color: var(--secondary-dark-color);
   padding-block: 1rem;
 }
 
@@ -47,13 +47,33 @@ button {
   margin-block: 1rem;
   width: 50%;
   box-shadow: 2px 2px 2px var(--secondary-medium-color);
-  transition: 0.2s linear;
+  transition: 0.3s ease-in-out;
 }
 
-button.show-answer:hover {
-  background-color: #f194b4;
-  font-size: 0.8rem;
-  box-shadow: none;
+* button.show-answer:hover,
+button.submit-form:hover {
+  animation: border 1.5s linear infinite;
+}
+@keyframes border {
+  0% {
+    box-shadow: 2px 2px 4px 2px var(--secondary-medium-color);
+  }
+
+  25% {
+    box-shadow: -2px 2px 4px 2px var(--secondary-medium-color);
+  }
+
+  75% {
+    box-shadow: -2px -2px 4px 2px var(--primary-medium-color);
+  }
+
+  100% {
+    box-shadow: 2px -2px 4px 2px var(--primary-medium-color);
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
@@ -68,6 +88,7 @@ button.show-answer:hover {
   padding-block: 10px;
   text-align: center;
   z-index: 2;
+  box-shadow: 2px 2px 4px #26281f;
 }
 
 .homepage-main,
@@ -86,7 +107,8 @@ button.show-answer:hover {
   max-height: calc(100vh - 70px);
 }
 
-.profile-main {
+.profile-main,
+.form-main {
   width: 100vw;
   height: 100vh;
   padding-top: 12vh;
@@ -99,6 +121,30 @@ button.show-answer:hover {
   --> need to understand fully later! */
   overflow-y: auto;
   max-height: calc(100vh - 70px);
+}
+
+.form {
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--border-radius-big);
+  padding: 1.5rem 1rem;
+  color: var(--secondary-medium-color);
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px var(--primary-dark-color);
+}
+
+.form > * {
+  display: block;
+  margin: 1rem auto;
+}
+
+.form > input {
+  width: 100%;
+}
+
+.remaining-characters {
+  color: var(--primary-medium-color);
+  font-size: 0.6rem;
+  text-align: right;
 }
 
 .profile-main > * {
@@ -172,57 +218,9 @@ button.show-answer:hover {
 
 .settings--dark-mode {
   display: flex;
-  justify-content: space-between;
-}
-
-/* following code courtesy of Google
---> need to fully understand later! */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--primary-medium-color);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 30px;
-}
-.slider:before {
-  position: absolute;
-  content: “”;
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--primary-medium-color);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 30px;
-}
-input:checked + .slider {
-  background-color: var(--primary-dark-color);
-}
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--primary-medium-color);
-}
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
 }
 
 .question-card {
@@ -247,7 +245,7 @@ input:checked + .slider:before {
   right: 0;
   width: 40px;
   height: 40px;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, -15%);
 }
 
 .tags {
@@ -265,6 +263,7 @@ input:checked + .slider:before {
   background-color: var(--primary-dark-color);
   color: var(--primary-light-color);
   font-size: 0.4rem;
+  width: 100%;
 }
 
 .footer {
@@ -296,4 +295,48 @@ input:checked + .slider:before {
 
 .nav-bar--btn {
   width: 30px;
+}
+
+.dm-btn-container {
+  width: 30%;
+  height: 25px;
+  /* border: 1px solid red; */
+  border-radius: var(--border-radius-big);
+}
+
+.dm-btn {
+  width: 50px;
+  height: 25px;
+  border-radius: 100px;
+  margin: auto 0;
+}
+
+.btn-position {
+  position: relative;
+  align-self: start;
+  transition: all 0.5s linear;
+}
+
+.position--0 {
+  top: 0;
+  left: 0;
+}
+
+.position--1 {
+  left: 60%;
+  transition: all 0.5s linear;
+}
+
+.darkmode {
+  /* --primary-dark-color: #003844;
+  --secondary-dark-color: #006c67;
+  --primary-medium-color: #f194b4;
+  --secondary-medium-color: #ffb100;
+  --primary-light-color: #ffebc6; */
+
+  --primary-dark-color: #003844;
+  --secondary-dark-color: #003844;
+  --primary-medium-color: #ffebc6;
+  --secondary-medium-color: #f194b4;
+  --primary-light-color: #01262e;
 }

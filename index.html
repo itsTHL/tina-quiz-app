@@ -11,13 +11,16 @@
     <main class="homepage-main">
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
+          data-js="bookmark-button"
         />
         <h2>What is the capital city of Vietnam?</h2>
-        <button class="show-answer">Show Answer</button>
-        <h3>Hanoi</h3>
+        <button class="show-answer" data-js="show-answer-button">
+          Show Answer
+        </button>
+        <h3 data-js="answer">Hanoi</h3>
         <div class="tags">
           <button class="btn-tags">#tagone</button>
           <button class="btn-tags">#tagtwo</button>
@@ -26,7 +29,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -44,7 +47,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -62,7 +65,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -80,7 +83,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -98,7 +101,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -117,7 +120,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -132,7 +135,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -147,7 +150,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -166,7 +169,7 @@
       </section>
       <section class="question-card">
         <img
-          src="./resources/resources/bookmark.png"
+          src="./resources/bookmark.png"
           alt="icon of a bookmark"
           class="bookmark"
         />
@@ -188,7 +191,7 @@
         <div class="nav-bar-items">
           <a href="./index.html"
             ><img
-              src="./resources/resources/home_filled.png"
+              src="./resources/home_filled.png"
               alt="icon for the home-button"
               class="nav-bar--btn"
           /></a>
@@ -196,20 +199,29 @@
         <div class="nav-bar-items">
           <a href="./bookmarks.html"
             ><img
-              src="./resources/resources/bookmark_transparent.png"
+              src="./resources/bookmark_transparent.png"
               alt="icon for the bookmark-button"
+              class="nav-bar--btn"
+          /></a>
+        </div>
+        <div class="nav-bar-items">
+          <a href="./form.html"
+            ><img
+              src="./resources/add.png"
+              alt="icon for the add-button"
               class="nav-bar--btn"
           /></a>
         </div>
         <div class="nav-bar-items">
           <a href="./profile.html"
             ><img
-              src="./resources/resources/profile.png"
+              src="./resources/profile.png"
               alt="icon for the profile-button"
               class="nav-bar--btn"
           /></a>
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
