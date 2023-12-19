@@ -157,13 +157,15 @@ button.submit-form:hover {
 
 .intro-section {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 20px;
   /* width: 75%; */
 }
 
 .profile-pic {
-  border-radius: var(--border-radius-big);
+  border-radius: 100px;
+  width: 120px;
+  box-shadow: 5px 5px 5px var(--primary-dark-color);
 }
 
 .profile-name {
