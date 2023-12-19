@@ -1,59 +1,13 @@
-:root {
-  --primary-dark-color: #003844;
-  --secondary-dark-color: #006c67;
-  --primary-medium-color: #f194b4;
-  --secondary-medium-color: #ffb100;
-  --primary-light-color: #ffebc6;
-
-  --border-radius-small: 5px;
-  --border-radius-big: 20px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--primary-light-color);
-  margin: 0 auto;
-  position: relative;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-h1 {
-  align-self: center;
-}
-
-h2 {
-  font-size: 1.2rem;
-  font-weight: bolder;
-  padding-block: 1rem;
-}
-
-h3 {
-  padding-block: 1rem;
-}
-
-button {
-  border: none;
-  border-radius: var(--border-radius-small);
-  background-color: var(--primary-light-color);
-  color: var(--primary-dark-color);
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: bolder;
-  margin-block: 1rem;
-  width: 50%;
-  box-shadow: 2px 2px 2px var(--secondary-medium-color);
-  transition: 0.3s ease-in-out;
-}
+@import "./global.css";
+@import "./form.css";
+@import "./profile.css";
+@import "./darkmode.css";
 
 * button.show-answer:hover,
 button.submit-form:hover {
   animation: border 1.5s linear infinite;
 }
+
 @keyframes border {
   0% {
     box-shadow: 2px 2px 4px 2px var(--secondary-medium-color);
@@ -74,21 +28,6 @@ button.submit-form:hover {
 
 .hidden {
   display: none;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: var(--primary-dark-color);
-  border-radius: var(--border-radius-small);
-  color: var(--primary-medium-color);
-  padding-block: 10px;
-  text-align: center;
-  z-index: 2;
-  box-shadow: 2px 2px 4px #26281f;
 }
 
 .homepage-main,
@@ -121,30 +60,6 @@ button.submit-form:hover {
   --> need to understand fully later! */
   overflow-y: auto;
   max-height: calc(100vh - 70px);
-}
-
-.form {
-  background-color: var(--secondary-dark-color);
-  border-radius: var(--border-radius-big);
-  padding: 1.5rem 1rem;
-  color: var(--secondary-medium-color);
-  font-weight: bolder;
-  box-shadow: 5px 5px 5px var(--primary-dark-color);
-}
-
-.form > * {
-  display: block;
-  margin: 1rem auto;
-}
-
-.form > input {
-  width: 100%;
-}
-
-.remaining-characters {
-  color: var(--primary-medium-color);
-  font-size: 0.6rem;
-  text-align: right;
 }
 
 .profile-main > * {
@@ -213,18 +128,6 @@ button.submit-form:hover {
   color: var(--primary-medium-color);
 }
 
-.settings--dark-mode-heading {
-  font-size: 0.9rem;
-  color: var(--secondary-medium-color);
-}
-
-.settings--dark-mode {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 25px;
-}
-
 .question-card {
   display: flex;
   flex-direction: column;
@@ -266,79 +169,4 @@ button.submit-form:hover {
   color: var(--primary-light-color);
   font-size: 0.4rem;
   width: 100%;
-}
-
-.footer {
-  background-color: var(--primary-dark-color);
-  border-radius: var(--border-radius-small);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  margin-block: 1.5vh;
-}
-
-.nav-bar-items {
-  background-color: var(--primary-medium-color);
-  border-radius: 25px;
-  padding: 0.4em;
-}
-
-.nav-bar-items:hover {
-  background-color: var(--secondary-medium-color);
-  transition: 0.3s linear;
-}
-
-.nav-bar--btn {
-  width: 30px;
-}
-
-.dm-btn-container {
-  width: 30%;
-  height: 25px;
-  /* border: 1px solid red; */
-  border-radius: var(--border-radius-big);
-}
-
-.dm-btn {
-  width: 50px;
-  height: 25px;
-  border-radius: 100px;
-  margin: auto 0;
-}
-
-.btn-position {
-  position: relative;
-  align-self: start;
-  transition: all 0.5s linear;
-}
-
-.position--0 {
-  top: 0;
-  left: 0;
-}
-
-.position--1 {
-  left: 60%;
-  transition: all 0.5s linear;
-}
-
-.darkmode {
-  /* --primary-dark-color: #003844;
-  --secondary-dark-color: #006c67;
-  --primary-medium-color: #f194b4;
-  --secondary-medium-color: #ffb100;
-  --primary-light-color: #ffebc6; */
-
-  --primary-dark-color: #003844;
-  --secondary-dark-color: #003844;
-  --primary-medium-color: #ffebc6;
-  --secondary-medium-color: #f194b4;
-  --primary-light-color: #01262e;
 }
