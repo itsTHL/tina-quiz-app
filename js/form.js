@@ -102,4 +102,7 @@ form.addEventListener("submit", (event) => {
       showAnswerButton.innerText = "Show Answer";
     }
   });
+  charactersLeftQuestion.textContent = MAX_CHARACTERS;
+  charactersLeftAnswer.textContent = MAX_CHARACTERS;
+  event.target.reset();
 });
