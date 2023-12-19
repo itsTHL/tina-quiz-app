@@ -300,9 +300,9 @@ button.submit-form:hover {
 }
 
 .dm-btn-container {
-  width: 30%;
+  /* width: 100%; */
   height: 25px;
-  /* border: 1px solid red; */
+  /* border: 2px solid yellow; */
   border-radius: var(--border-radius-big);
 }
 
@@ -316,7 +316,7 @@ button.submit-form:hover {
 .btn-position {
   position: relative;
   align-self: start;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 
 .position--0 {
@@ -326,7 +326,7 @@ button.submit-form:hover {
 
 .position--1 {
   left: 60%;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 
 .darkmode {
