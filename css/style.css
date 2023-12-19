@@ -169,7 +169,7 @@ button.submit-form:hover {
 .profile-name {
   color: var(--secondary-medium-color);
   align-self: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: bold;
 }
 
