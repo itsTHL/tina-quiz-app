@@ -1,0 +1,23 @@
+.form {
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--border-radius-big);
+  padding: 1.5rem 1rem;
+  color: var(--secondary-medium-color);
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px var(--primary-dark-color);
+}
+
+.form > * {
+  display: block;
+  margin: 1rem auto;
+}
+
+.form > input {
+  width: 100%;
+}
+
+.remaining-characters {
+  color: var(--primary-medium-color);
+  font-size: 0.6rem;
+  text-align: right;
+}

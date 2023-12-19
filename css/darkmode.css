@@ -1,0 +1,55 @@
+.settings--dark-mode-heading {
+  font-size: 0.9rem;
+  color: var(--secondary-medium-color);
+}
+
+.settings--dark-mode {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.dm-btn-container {
+  /* width: 100%; */
+  height: 25px;
+  /* border: 2px solid yellow; */
+  border-radius: var(--border-radius-big);
+}
+
+.dm-btn {
+  width: 50px;
+  height: 25px;
+  border-radius: 100px;
+  margin: auto 0;
+}
+
+.btn-position {
+  position: relative;
+  align-self: start;
+  transition: all 0.3s linear;
+}
+
+.position--0 {
+  top: 0;
+  left: 0;
+}
+
+.position--1 {
+  left: 60%;
+  transition: all 0.3s linear;
+}
+
+.darkmode {
+  /* --primary-dark-color: #003844;
+  --secondary-dark-color: #006c67;
+  --primary-medium-color: #f194b4;
+  --secondary-medium-color: #ffb100;
+  --primary-light-color: #ffebc6; */
+
+  --primary-dark-color: #003844;
+  --secondary-dark-color: #003844;
+  --primary-medium-color: #ffebc6;
+  --secondary-medium-color: #f194b4;
+  --primary-light-color: #01262e;
+}
